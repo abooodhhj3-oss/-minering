@@ -1,3 +1,15 @@
+# CachyOS experimental test 1
+
+[Download EldenCraft-ER117-CachyOS-test1.zip](./EldenCraft-ER117-CachyOS-test1.zip) — experimental Linux launcher around the unchanged Windows test3 native/graphics payloads. No Linux gameplay or Proton validation claim.
+
+Extract the full ZIP. On CachyOS open/sign in to Steam, install **Proton 10.0** and **Steam Linux Runtime 3.0 (sniper)** from Library > Tools, then run `bash EldenCraft-Linux.sh --game "/your/path/ELDEN RING/Game/eldenring.exe"`. The script downloads and verifies portable Windows Prism/Java, ReShade and Fabric API, prepares one dedicated Proton prefix, checks IPC, and launches the game only through official ModEngine2 offline/EAC-off. Sign in to your Minecraft Microsoft account in Prism when prompted. No appmanifest needed. Read the ZIP's README.md first.
+
+Uses CPU frames, 720p, Minecraft 2 GB heap, render distance 6 and simulation distance 5. Data: `~/.local/share/EldenCraft117-Linux`. Support ZIP: `bash EldenCraft-Linux.sh diagnose`.
+
+Cloud checks: 16 Python tests, 45 existing frame/block checks under Wine, real two-process Win32 IPC and negative mapping/process/window guards; actual packaged help/manifest/diagnosis passed. CachyOS, Proton/Steam runtime, account login, both games and graphics remain untested. No game files, accounts or tokens included. Credits: SocketByte/Adam Grzegorzewski and Melty. Full source/sheets are inside port-source.zip. This is a GitHub test upload, not Melty publication.
+
+SHA256: `0981e0bbd760f0f62d42f2f38c90194267129ad04fd99bca5d6ee4991d2b1421`; 22,804,294 bytes. Windows test packages below are retained.
+
 # EldenCraft for Elden Ring 1.17 — test build 3
 
 An experimental compatibility port of SocketByte's EldenCraft 0.25.5 for the exact executable you measured. Original EldenCraft is by Adam Grzegorzewski (SocketByte), under MIT. Minecraft Ring on Melty is credited to Melty; this package has not been imported into or approved by Melty.
