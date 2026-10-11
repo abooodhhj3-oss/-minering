@@ -1,4 +1,4 @@
-# EldenCraft for Elden Ring 1.17 — test build 2
+# EldenCraft for Elden Ring 1.17 — test build 2 — diagnostics fix 1
 
 An experimental compatibility port of SocketByte's EldenCraft 0.25.5 for the exact executable you measured. Original EldenCraft is by Adam Grzegorzewski (SocketByte), under MIT. Minecraft Ring on Melty is credited to Melty; this package has not been imported into or approved by Melty.
 
@@ -29,3 +29,9 @@ Source-sheet preflight is clean. Windows x64 core and loader DLLs compile with R
 **Still untested:** test 2 on Windows, graphics/compositor behavior, game memory layouts and gameplay. The cloud has no Elden Ring installation or Windows graphics session. ReShade and Fabric's domains are blocked here, so their pinned downloads execute automatically on your PC but have not been downloaded or installed here. Melty is also network-blocked: no Melty remix draft, recipe validation, one-click check, upload or publication occurred. Do not call this build game-verified or published.
 
 `PORT-PROVENANCE.json` identifies every built/reused input. `port-source.zip` contains source, sheets and generators. No game binaries, saves, accounts, keys or generated gameplay media are included. Keep `LICENSE`, `THIRD_PARTY_NOTICES.md` and `licenses/` with redistributed files.
+
+## Diagnostics fix 1
+
+Test 2 failed to bind diagnostics parameters because generated settings preceded param(). This revision initializes settings after the parameter block. Script AST/parameter binding checks and full noninteractive collector execution with a synthetic PE fixture passed on Linux PowerShell 7.4.6. Windows PowerShell 5.1 and Windows Event Log access remain untested here. Native DLLs are identical to test 2; no native rebuild or new tools were needed.
+
+To diagnose the already-failed test 2 launch, extract this ZIP and run its Troubleshoot.cmd. It reads the existing LocalAppData/EldenCraft117 logs and creates a support ZIP. You do not need to repeat the game launch first. Upload that support ZIP to continue the early-exit investigation.
